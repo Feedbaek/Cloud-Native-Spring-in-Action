@@ -11,7 +11,7 @@ spring:
   # H2 Database
   datasource:
     driver-class-name: org.h2.Driver
-    url: 'jdbc:h2:mem:test'
+    url: 'jdbc:h2:mem:book'
     username: username
     password: password
 
@@ -23,7 +23,6 @@ spring:
 
   # JPA
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: create
     properties:
@@ -31,3 +30,13 @@ spring:
         dialect: org.hibernate.dialect.H2Dialect
         format_sql: true
         show_sql: true
+
+
+server:
+  port: 8080
+  tomcat:
+    connection-timeout: 2s
+    keep-alive-timeout: 12s
+    threads:
+      max: 30
+      min-spare: 3

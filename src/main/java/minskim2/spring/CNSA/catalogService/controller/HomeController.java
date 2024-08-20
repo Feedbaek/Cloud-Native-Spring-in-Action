@@ -1,4 +1,4 @@
-package minskim2.spring.CNSA.chapter2;
+package minskim2.spring.CNSA.catalogService.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
